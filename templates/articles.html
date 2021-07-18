@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+    <br>
+    <h1>Our Articles</h1>
+    <head>
+          <div class ="container">
+          <title>  Articles </title>
+          </div>
+    </head>
+ <body>
+
+ <div class ="post">
+ <br>
+ <h2> David Attenborough: A Life on Our Planet review – stark climate emergency warning </h2>
+ <p> All species of orangutans are critically endangered due to the loss, degradation, and fragmentation of their forest habitat.</p>
+
+ <a href = "article-1"> Read more</a>
+ </div>
+
+ <div class ="post">
+ <br>
+ <h2> Orangutans: Why They're Under Threat </h2>
+ <p> All species of orangutans are critically endangered due to the loss, degradation, and fragmentation of their forest habitat.</p>
+ <a href = "article-2"> Read more</a>
+ </div>
+
+ <div class ="post">
+ <br>
+ <h2> Whale Conservation: The Facts </h2>
+ <p> Whales roam throughout all of the world's oceans, communicating with complex and mysterious sounds.</p>
+ <a href = "article-3"> Read more</a>
+ </div>
+
+  <div class ="post">
+ <br>
+ <h2> Bali Animals: How to Find Ethical Tourism Experiences </h2>
+ <p> Unfortunately, a large percentage of Bali animal tourist attractions should be completely disregarded. This is because they typically involve an animal in captivity, where they are forced to do abnormal things, is not fed on a natural diet and sometimes drugged. Here’s some of the things we can be avoiding to help Bali animals.</p>
+ <a href = "article-4"> Read more</a>
+ </div>
+ <br>
+ </body>
+
+<div
+    style="padding-top:20px; padding-bottom:20px">
+            <!--Go back to home page-->
+        <div class="border-top pt-3" style="text-size: 14px">
+          <h4 class="text-muted">
+            <a class="ml-2" href="{{ url_for('home_page') }}"> Go back to the homepage </a>
+          </h4>
+        </div>
+</div>
+
+{% endblock content %}

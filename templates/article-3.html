@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Whale Conservation: The Facts</h1>
+    <p>
+        Whales roam throughout all of the world's oceans, communicating with complex and mysterious sounds. Their sheer size amazes us: the blue whale can reach lengths of more than 100 feet and weigh up to 200 tons—as much as 33 elephants.
+        Despite living in the water, whales breathe air. And like humans, they are warm-blooded mammals who nurse their young. A thick layer of fat called blubber insulates them from cold ocean waters.
+        Some whales are known as baleen whales, including blue, right, bowhead, sei, and gray whales. This refers to the fact that they have special bristle-like structures in their mouths (called baleen) that strain food from the water. Other whales, such as beluga or sperm whales, have teeth.
+    </p>
+    <img src="static/images/whaletail.jpg" alt="Whale Conservation">
+    <h2> Threats</h2>
+    <h3>Commercial Whaling</h3>
+        <p>
+        Despite a moratorium on commercial whaling and a ban on international trade of whale products, three countries—Iceland, Japan, and Norway—continue their commercial whale hunts. Over 1,000 whales a year are killed for such commercial purposes. The blue whale, the largest animal ever known to have existed, was almost exterminated in the 20th century due to commercial whaling.
+        The United States and other International Whaling Commission (IWC) member countries have tried for years to persuade Iceland, Japan, and Norway to end their whaling as it undermines the effectiveness of the commission's commercial whaling ban. However, in 2019, Japan chose to walk away from the IWC and now conducts commercial whaling in its own territorial waters, outside of any international controls.
+        </p>
+    <img src="static/images/whaleheader.jpg" alt="Whale in the Ocean">
+    <h3>Climate Change</h3>
+        <p>
+        Warming oceans and loss of sea ice in the Arctic and Antarctic can affect the habitats and food of whales. Large patches of tiny plants and animals that they feed on will likely move or change in abundance as climate change alters seawater temperature, winds, and ocean currents. These changes can mean whales such as humpbacks and blues may have to migrate much further to reach feeding grounds, leaving them with less time to forage for food. The shift in food availability due to climate fluctuations has already hurt the reproductive rates of the endangered North Atlantic right whale.
+        </p>
+
+<!--Go back to previous url-->
+    <div class="border-top pt-3">
+        <h4 class="text-muted">
+        <a class="ml-2" href="{{ request.referrer }}"> Go Back </a>
+        </h4>
+    </div>
+<br>
+
+{% endblock content %}

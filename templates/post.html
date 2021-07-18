@@ -1,0 +1,206 @@
+{% extends "layout.html" %} {% block content %}
+<div style="padding-top:20px; padding-bottom:30px">
+<div class="row">
+  <div class="col-md-12">
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+              <small class="text-muted">posted by {{ post.author.username }}</small>
+              <small class="text-muted"> at {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+
+          {% if post.author == current_user %}
+          <div>
+            <a
+              class="btn btn-secondary btn-sm mt-1"
+              href="{{ url_for('update_post', post_id=post.id) }}"
+              >Update</a
+            >
+            <button
+              type="button"
+              class="btn btn-danger btn-sm m-1"
+              data-toggle="modal"
+              data-target="#deleteModal"
+            >
+              Delete
+            </button>
+          </div>
+          {% endif %}
+        </div>
+        <h2 class="article-title">{{ post.title }}</h2>
+        <p class="article-content">{{ post.content }}</p>
+      </div>
+    </article>
+
+      <!--like Button      -->
+    <div class="border-top pt-3">
+      {% if current_user.is_authenticated %}
+        <h6>{{post.likes}} Likes </h6>
+
+        {% if current_user.has_liked_post(post) %}
+        <small class="text-muted">
+          <a
+            href="{{ url_for('like_action', post_id=post.id, action='unlike') }}"
+            > Unlike</a
+          >
+        </small>
+        {% else %}
+        <small class="text-muted">
+          <a href="{{ url_for('like_action', post_id=post.id, action='like') }}"
+            > Like</a
+          >
+        </small>
+        {% endif %}
+
+    {% else %}
+      <div class="popup" onclick="popupFunction()" >
+          <h6>{{post.likes}} Likes </h6>
+            <span class="popuptext" id="myPopup"> You must be logged in to like this post!</span>
+       </div>
+
+    {% endif %}
+    </div>
+  </div>
+
+    </article>
+  </div>
+</div>
+
+<!-- Comments section underneath each article-->
+<div class="row">
+  <div class="col-md-12">
+    <div class="comments-area">
+      <h4>{{post.comments}} Comments</h4>
+      {% for message in comments %}
+      <div class="comment-list">
+        <div class="single-comment justify-content-between d-flex">
+          <div class="user justify-content-between d-flex">
+            <div class="desc">
+              <h5><a href="#">{{message.name}}</a></h5>
+              <p class="date">
+                {{message.date_pub.strftime('%d/%m/%Y, %H:%M')}}
+              </p>
+              <p class="comment">{{message.message}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col col-md-8">
+    <div class="comment-form">
+      <h4>Leave a Comment</h4>
+      <form method="POST">
+        <div class="form-group">
+          <div class="form-group col-lg-6 col-md-6 name">
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              placeholder="Enter Name"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Enter Name'"
+            />
+          </div>
+          <div class="form-group col-lg-6 col-md-6 email">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email address"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Enter email address'"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <textarea
+            name="message"
+            class="form-control col-lg-10 col-md-8"
+            rows="5"
+            name="message"
+            placeholder="Message"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Message'"
+            required=""
+          ></textarea>
+        </div>
+        <button type="submit" class="primary-btn submit_btn">
+          Post Comment
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="deleteModalLabel">Delete Post?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+        <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div-->
+<!--  class="modal fade"-->
+<!--  id="deleteModal"-->
+<!--  tabindex="-1"-->
+<!--  role="dialog"-->
+<!--  aria-labelledby="deleteModalLabel"-->
+<!--  aria-hidden="true"-->
+<!--&gt;-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>-->
+<!--        <button-->
+<!--          type="button"-->
+<!--          class="close"-->
+<!--          data-dismiss="modal"-->
+<!--          aria-label="Close"-->
+<!--        ></button>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">-->
+<!--          Close-->
+<!--        </button>-->
+<!--        <form-->
+<!--          action="{{ url_for('delete_post', post_id=post.id) }}"-->
+<!--          method="POST"-->
+<!--        >-->
+<!--          <input class="btn btn-danger" type="submit" value="Delete" />-->
+<!--        </form>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--Go back to previous url-->
+<div class="border-top pt-3" style="text-size: 14px">
+  <h4 class="text-muted">
+    <a class="ml-2" href="{{ request.referrer }}"> Go Back </a>
+  </h4>
+</div>
+<br>
+
+{% endblock content %}

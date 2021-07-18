@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>An unexpected error has occurred</h1>
+    <p>The administrator has been notified. Sorry for the inconvenience!</p>
+    <div
+    style="padding-top:20px; padding-bottom:20px">
+            <!--Go back to home page-->
+        <div class="border-top pt-3" style="text-size: 14px">
+          <h4 class="text-muted">
+            <a class="ml-2" href="{{ url_for('home_page') }}"> Go back to the homepage </a>
+          </h4>
+        </div>
+</div>
+{% endblock %}

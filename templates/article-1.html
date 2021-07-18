@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="width:100%">
+    <h1 style="text-align: left">David Attenborough: A Life on Our Planet review – stark climate emergency warning</h1>
+    <h3>This terrifying documentary looks back over the 93-year-old’s career – but at its heart is a short, sharp, shocking lesson</h3>
+    <div class="video">
+    <iframe width="560" height="315" style="padding:20px; text-align:center;" src="https://www.youtube.com/embed/64R2MYUt394" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>
+        ‘I am David Attenborough and I’m 93. This is my witness statement.” There is a tremendously moving sense of finality about Attenborough’s terrifying new documentary on the climate emergency. It is being marketed as a retrospective, a look back at his life and 60-years-plus career. But make no mistake about its true agenda: Attenborough is here to deliver a stark warning that time is ticking for the planet. It is a personal film – and political, too. There is emotion and urgency in that familiar soothing voice. At one point he rubs his eyes, reddened and damp.
+    </p>
+    <img src="static/images/David.jpg" alt="Sir David Attenborough" style="padding:10px;">
+    <p>
+        You could rename it The Dying Planet, a short, sharp, shocking 80-minute lesson on global heating. There is an obligatory dramatisation of Attenborough as a boy in short trousers collecting fossils. And, of course, clips from the BBC of him as a hearty young man rolling around with baby gorillas in Rwanda. What he didn’t know then, he says mournfully, was how much damage we were inflicting on the planet. “The forests and seas were already emptying.”
+
+        The statistics on the screen are brutal. The “before” and “after” footage is even worse. Before: orangutans swinging through the rainforest in Borneo. After: no forest, a single orangutan attempting to clamber up a branchless tree trunk.
+
+        But, just when you think the film is bludgeoning you with bleakness, Attenborough lets the light in. His message in the final 30 minutes is that it’s not too late if we act now. Halt the growth in the world’s population. Create no-fishing zones. Stop eating meat. It’s not about saving the planet, it’s about saving ourselves.
+
+        It occurred to me afterwards: what happens when Attenborough is no longer around to coax us out from behind the sofa? He is a one-man Extinction Rebellion.
+    </p>
+    <br>
+</div>
+
+<!--Go back to previous url-->
+    <div class="border-top pt-3" style="text-size: 14px">
+        <h4 class="text-muted">
+        <a class="ml-2" href="{{ request.referrer }}"> Go Back </a>
+        </h4>
+    </div>
+<br>
+
+{% endblock content %}

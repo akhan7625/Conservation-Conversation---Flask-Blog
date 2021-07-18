@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Orangutans: Why They're Under Threat</h1>
+    <p>
+        <img src="static/images/orangutan.jpg" alt="Orangutan" style="padding:20px;" height="678" width="1017">
+        All species of orangutans are critically endangered due to the loss, degradation, and fragmentation of their forest habitat.
+        The threats are illegal logging, oil-palm plantations, forest fires, mining and small-scale shifting cultivation.  By 2080, if current trends continue, it has been projected that the Bornean orangutan will lose 70-80% of its forest habitat.
+    </p>
+    <h2>Oil-palm plantations</h2>
+    <img src="static/images/palm_oil.jpg" alt="Palm Oil Threat" style="padding:20px;">
+    <p>
+        Indonesia is the world’s largest palm oil producer.  Palm oil is a type of vegetable oil produced from the kernels of oil palm trees.
+        Orangutan populations are threatened because their habitat, low-lying tropical rainforest, has been cleared and converted to oil-palm plantations.
+        Orangutans and the biodiversity struggle to co-exist with oil-palm plantations.
+        In recent years, fires have been used to clear land for the development of oil-palm plantations.
+    </p>
+    <h2>Forest fires</h2>
+    <img src="static/images/fire.jpg" alt="Rainforest Fire" style="padding:20px;">
+    <p>
+        Fires have been traditionally used for slash and burn farming. However, when the fires coincide with an El Nino year (which results in a longer than normal dry season) they can burn out of control. This is especially so in peat forests, once peat burns it is very difficult to extinguish.
+        For example, the fires of 2015 in Indonesia resulted in the loss of 2 million hectares of forest, an area the size of Wales. Fires destroy forests, kill and displace wildlife, emit huge amounts of carbon into the atmosphere and cause deadly air pollution. Fires are an ongoing problem.
+    </p>
+
+    <h2>Logging</h2>
+    <p>
+        Logging concessions when well managed can sustain populations of orangutans. Illegal logging has been a major and complex problem in Indonesia and this can contribute to population decline.
+    </p>
+    <h2>Mining</h2>
+    <p>
+        Mining in recent years has caused irreversible damage to Indonesia’s forests. Illegal open cast mining for gold and zircon in protected areas has turned the lush primary rainforest into a barren and lifeless desert. Mercury, used in the mining process, contaminates the river systems, killing fish and other wildlife.
+        Due to deforestation, Indonesia is one of the world’s biggest emitters of greenhouse gases.
+    </p>
+    <h2>Hunting and the pet trade</h2>
+    <p>
+        In the past, hunting has been responsible for the local extinction of orangutans. The orangutan is a protected species in Malaysia and Indonesia and it is illegal to own, harm or trade orangutans in these countries.
+        The process of land clearing exposes wild orangutans, who are considered as pests and consequently some are shot. If infant orangutans survive the death of their mothers, they often end up as pets in local communities.
+    </p>
+<!--Go back to previous url-->
+    <div class="border-top pt-3">
+        <h4 class="text-muted">
+        <a class="ml-2" href="{{ request.referrer }}"> Go Back </a>
+        </h4>
+    </div>
+<br>
+
+
+{% endblock content %}

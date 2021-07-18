@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- STEPS =============================-->
+<div class="item content">
+	<div class="container toparea">
+		<div class="row text-center">
+			<h2> Top Picks From Our Community Blog! </h2>
+			<div class="col-md-4">
+				<div class="col editContent">
+					<span class="numberstep"><i class="fa fa-paw"></i></span>
+					<h3 class="numbertext">
+					<a href="{{ url_for('most_recent') }}"> Latest Posts </a>
+					</h3>
+					<p>
+						<div class="row text-center">
+						  The latest posts from the blog!
+						</div>
+					</p>
+				</div>
+				<!-- /.col-md-4 -->
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4 editContent">
+				<div class="col">
+					<span class="numberstep"><i class="fa fa-paw"></i></span>
+					<h3 class="numbertext">
+					<a href="{{ url_for('most_liked') }}"> Most Liked </a>
+					</h3>
+					<p>
+						<div class="row text-center">
+						  The blog posts with the most love!
+						</div>
+					</p>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4 editContent">
+				<div class="col">
+					<span class="numberstep"><i class="fa fa-paw"></i></span>
+					<h3 class="numbertext">
+					<a href="{{ url_for('most_commented') }}"> Conversation Starter </a>
+					</h3>
+					<p>
+						<div class="row text-center">
+						  The posts that have our members chatting!
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class= 'sub-section'>
+
+
+<img src="static/images/jagbanner.jpeg" alt="Rainforest" style="width:100%">
+
+</div>
+
+
+<!-- AREA =============================-->
+<div class="item content">
+	<div class="container">
+		<div
+    		style="padding-bottom:30px">
+				<div class="row text-center">
+					<h2> Our Latest Articles! </h2>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<i class="fa fa-comments infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">David Attenborough: A Life on Our Planet review – stark climate emergency warning</h1>
+					<p>
+						 This terrifying documentary looks back over the 93-year-old’s career – but at its heart is a short, sharp, shocking lesson. I am David Attenborough and I’m 93. This is my witness statement.” ...
+					</p>
+					<p class="text-center">
+						<a href="article-1">- Read More -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-comments infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Orangutans: Why They're Under Threat</h1>
+					<p>
+						 All species of orangutans are critically endangered due to the loss, degradation, and fragmentation of their forest habitat. The threats are illegal logging, oil-palm plantations, forest fires, mining and small-scale shifting...
+					</p>
+					<p class="text-center">
+						<a href="article-2">- Read More -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-comments infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Whale Conservation: The Facts</h1>
+					<p>
+						 Whales roam throughout all of the world's oceans, communicating with complex and mysterious sounds. Their sheer size amazes us: the blue whale can reach lengths of more than 100 feet and weigh up to 200 tons—as much as 33 elephants...
+					</p>
+					<p class="text-center">
+						<a href="article-3">- Read More -</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+<!-- TESTIMONIAL =============================-->
+<!--<div class="item content">-->
+<!--	<div class="container">-->
+<!--		<div class="col-md-10 col-md-offset-1">-->
+<!--			<div class="slide-text">-->
+<!--				<div>-->
+<!--					<h2><span class="uppercase">Awesome Support</span></h2>-->
+<!--					<img src="http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png" alt="Awesome Support">-->
+<!--					<p>-->
+<!--						 The support... I can only say it's awesome. You make a product and you help people out any way you can even if it means that you have to log in on their dashboard to sort out any problems that customer might have. Simply Outstanding!-->
+<!--					</p>-->
+<!--					<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+
+
+
+
+
+<!-- CALL TO ACTION =============================-->
+<!--<section class="content-block" style="background-color:#00bba7;">-->
+<!--<div class="container text-center">-->
+<!--	<div class="row">-->
+<!--		<div class="col-sm-10 col-sm-offset-1">-->
+<!--			<div class="item" data-scrollreveal="enter top over 0.4s after 0.1s">-->
+<!--				<h1 class="callactiontitle"> Promote Items Area Give Discount to Buyers <span class="callactionbutton"><i class="fa fa-gift"></i> WOW24TH</span>-->
+<!--				</h1>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+<!--</section>-->
+
+{% endblock content %}
